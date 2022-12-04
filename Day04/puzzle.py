@@ -1,6 +1,6 @@
 file_name = 'Day04/input.txt'
 with open(file_name) as input_file:
-    pairs = [[[int(i) for i in section.split('-')] for section in line.strip().split(',')] for line in input_file]
+    pairs = [[[int(i) for i in pair.split('-')] for pair in line.strip().split(',')] for line in input_file]
 
 set_pairs = [[set(range(r1[0], r1[1] + 1)), set(range(r2[0], r2[1] + 1))] for r1, r2 in pairs]
 
